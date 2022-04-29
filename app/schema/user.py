@@ -2,6 +2,12 @@ from marshmallow import Schema, fields, post_load
 from app.models.user import User
 from app.utils.security import gen_salt, encrypt_password
 
+
+# class BaseSchema(Schema):
+
+#     def handle_error(self, exc, data, **kwargs):
+
+
 class UserReq(Schema):
     account = fields.String(data_key='account')
     password = fields.String(data_key='password')
